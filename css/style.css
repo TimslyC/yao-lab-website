@@ -1883,3 +1883,211 @@ img {
     padding: 24px;
   }
 }
+
+/* Added image-rich sections */
+.process-collage {
+  display: grid;
+  gap: 14px;
+}
+
+.process-collage-main {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.process-collage-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.process-collage-row img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(157, 28, 32, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.lab-visual-section {
+  overflow: hidden;
+}
+
+.visual-card-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.visual-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease),
+    border-color 0.35s ease;
+}
+
+.visual-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(157, 28, 32, 0.24);
+  box-shadow: var(--shadow-md);
+}
+
+.visual-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.visual-card-large {
+  grid-row: span 2;
+}
+
+.visual-card-large img {
+  height: 430px;
+}
+
+.visual-card div {
+  padding: 24px;
+}
+
+.visual-card span,
+.team-life-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--xdu-red);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.visual-card h3,
+.team-life-card h3 {
+  margin: 0 0 10px;
+  color: var(--xdu-red-dark);
+  font-size: 24px;
+  line-height: 1.24;
+}
+
+.visual-card p,
+.team-life-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.research-detail-card-visual {
+  align-items: start;
+}
+
+.research-image {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(157, 28, 32, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.research-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.research-image figcaption {
+  padding: 12px 16px 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.research-visuals-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.research-visuals-duo .research-image img {
+  height: 220px;
+}
+
+.team-life-section {
+  padding-top: 0;
+}
+
+.team-life-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.team-life-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease),
+    border-color 0.35s ease;
+}
+
+.team-life-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(157, 28, 32, 0.24);
+  box-shadow: var(--shadow-md);
+}
+
+.team-life-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.team-life-card div {
+  padding: 24px;
+}
+
+@media (max-width: 1080px) {
+  .visual-card-grid,
+  .team-life-grid,
+  .research-visuals-duo {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-card-large {
+    grid-row: auto;
+  }
+
+  .visual-card-large img,
+  .visual-card img,
+  .team-life-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .process-collage-main,
+  .process-collage-row img,
+  .research-image img,
+  .research-visuals-duo .research-image img,
+  .visual-card-large img,
+  .visual-card img,
+  .team-life-card img {
+    height: 220px;
+  }
+
+  .process-collage-row {
+    grid-template-columns: 1fr;
+  }
+}
